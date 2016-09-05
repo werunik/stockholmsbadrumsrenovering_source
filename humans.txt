@@ -1,0 +1,14 @@
+/* TEAM */
+  Ismail Mechbal
+  Contact: ismail [at] unik.ma
+  Twitter: @ismailmechbal
+  From:Stockholm, Sweden
+
+/* THANKS */
+  Everyone who reads this! Love you All!
+
+/* SITE */
+  Language: Swedish
+  Doctype:HTML5
+  Framework: Jekyll
+  IDE: Sublime Text

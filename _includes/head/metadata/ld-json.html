@@ -1,0 +1,31 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "NewsArticle",
+    "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+    "headline": "{{ page.title }}",
+    "datePublished": "{{ page.date }}",
+    "dateModified": "{{ page.date }}",
+    "description": "{{ page.description | flatify }}",
+    "author": {
+      "@type": "Organization",
+      "name": {{ site.organization_name }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site.organization_name }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cdn.amproject.org/i/{{ site.amp_cache_url }}/images/logo.jpg",
+        "width": 600,
+        "height": 60
+      }
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://cdn.amproject.org/i/{{ site.amp_cache_url }}/{{ page.amp_image_leader }}",
+      "height": 2000,
+      "width": 800
+    }
+  }
+</script>

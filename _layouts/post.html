@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<main class="flex">
+  <article class="post section-padding" itemprop="blogPost" itemscope="" itemtype="http://schema.org/BlogPosting">
+    <meta itemprop="keywords" content="{{ page.categories | join: ',' }}">
+    <meta itemprop="description" content="{{ page.description | strip_html | truncatewords: 40 }}">
+    <h1 itemprop="name" class="text-center m-t-2em">{{ page.title }}</h1>
+    <time class="published" itemprop="datePublished"
+      datetime="{{ page.date | date: '%Y-%m-%d' }}">
+      {{ page.date | date: "%B %e, %Y" }}
+    </time>
+    {% if page.image %}
+      <img src="{{ page.image }}" alt="{{ page.title }}">
+    {% endif %}
+    <div class="entry" itemprop="articleBody">
+      {{ content }}
+    </div>
+  </article>
+  <section class="cta section-padding white-bg">
+    {% include partials/block_testimonials.html %}
+  </section>
+  <section class="cta section-padding">
+    {% include partials/block_cta.html %}
+  </section>
+</main>

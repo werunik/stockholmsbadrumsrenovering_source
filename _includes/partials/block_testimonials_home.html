@@ -1,0 +1,12 @@
+<div class="testimonials">
+  <h2>Nöjda kunder</h2>
+  {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
+  {% for rekommendation in rekommendationer limit:3 %}
+    <div class="testimonial block">
+      <h4><a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}">{{ rekommendation.title | escape }}</a></h4>
+      <blockquote>{{ rekommendation.excerpt markdownify | strip_html | truncatewords: 30 }}</blockquote>
+      <div class="testimonial-client">— {{ rekommendation.kund }}</div>
+    </div>
+  {% endfor %}
+  <a href="/rekommendationer" alt="Fler Rekommendationer för Stockholms Badrums Renovering" class="link-more">Fler Rekommendationer</a>
+</div>
