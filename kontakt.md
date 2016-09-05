@@ -1,10 +1,10 @@
 ---
 layout: offert
-title: Vill du få en gratis offert eller ett kostnadsfritt besök?
+title: Kontakta oss för en gratis offert eller ett kostnadsfritt besök
 date: 2016-08-29 15:54:10 +0200
 class: offert
-description: Kontakta oss för boka en gratis offertbesök.
-permalink: /offert/
+description: Kontakta oss för en gratis offert eller ett kostnadsfritt besök.
+permalink: /kontakt/
 ---
 <div class="cta-form one half-500 half-800">
   <form action="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">

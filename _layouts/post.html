@@ -10,10 +10,7 @@ layout: default
       datetime="{{ page.date | date: '%Y-%m-%d' }}">
       {{ page.date | date: "%B %e, %Y" }}
     </time>
-    {% if page.image %}
-      <img src="{{ page.image }}" alt="{{ page.title }}">
-    {% endif %}
-    <div class="entry" itemprop="articleBody">
+    <div class="flex" itemprop="articleBody">
       {{ content }}
     </div>
   </article>

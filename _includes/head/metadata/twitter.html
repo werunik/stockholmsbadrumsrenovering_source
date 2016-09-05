@@ -1,7 +1,8 @@
 <!-- Twitter Card data -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@publisher_handle">
-<meta name="twitter:title" content="Page Title">
+<meta name="twitter:card" content="{% if page.image %}{{ page.image }}{% else %}{{ site.og_image }}{% endif %}">
+<meta name="twitter:site" content="@kmliving.se">
+<meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description | flatify }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:creator" content="@author_handle">
-<meta name="twitter:image:src" content="http://www.example.com/image.jpg">
+<meta name="twitter:creator" content="@kmliving.se">
+<meta name="twitter:image:src" content="{% if page.image %}{{ page.image }}{% else %}{{ site.og_image }}{% endif %}">
+<meta property="og:image" content="{% if page.image %}{{ page.image }}{% else %}{{ site.og_image }}{% endif %}">

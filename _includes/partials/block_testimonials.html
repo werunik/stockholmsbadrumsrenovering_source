@@ -3,11 +3,15 @@
   {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
   {% for rekommendation in rekommendationer limit:4 %}
     <div class="testimonial block">
-      <img src="{{ rekommendation.thumbnail_image }}">
+      <amp-img placeholder
+        src="{{ rekommendation.thumbnail_image }}"
+        layout="responsive" width="260" height="200"
+        alt="{{ rekommendation.title | escape }}">
+      </amp-img>
       <h4><a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}">{{ rekommendation.title | escape }}</a></h4>
       <blockquote>{{ rekommendation.excerpt markdownify | strip_html | truncatewords: 30 }}</blockquote>
       <div class="testimonial-client">— {{ rekommendation.kund }}</div>
     </div>
   {% endfor %}
 </div>
-<a href="/rekommendationer" alt="Fler Rekommendationer för Stockholms Badrums Renovering" class="link-more">Fler Rekommendationer</a>
+<a href="/rekommendationer" title="Fler Rekommendationer för Stockholms Badrums Renovering" class="link-more">Fler Rekommendationer</a>

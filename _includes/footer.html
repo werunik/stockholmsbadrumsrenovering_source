@@ -1,7 +1,7 @@
 <footer>
 <div class="flex one five-800 no-flex-800">
   <div class="flex none one-500 one-800">
-    <a href="/" class="brand", itemprop="logo">
+    <a href="/" class="brand" itemprop="logo">
       {% include partials/svg/logo.html %}
     </a>
   </div>
@@ -14,12 +14,14 @@
   <div class="flex one">
     <a href="/rekommendationer" title="Rekommendationer">Rekommendationer</a>
     <a href="/offert" title="Offertförfrågan">Offertförfrågan</a>
-    <a href="/kontakt" title="Kontakta oss">Kontakta oss</a>
+    <a href="/kontakt" title="Kontakta">Kontakt</a>
   </div>
   <div class="flex one">
     <a href="/bloggen" title="Bloggen">Bloggen</a>
-    <a href="/badrumsrenovering" title="Badrumsrenovering">Instagram</a>
-    <a href="/rekommendationer" title="Rekommendationer">Facebook</a>
+    <a href="https://www.facebook.com/KMLivingConstructionAB/" title="Facebook">Facebook</a>
+    <a href="https://www.instagram.com/km.living/" title="Instagram">Instagram</a>
+    <a href="https://www.pinterest.com/stockholmbadrum/" title="Pinterest">Pinterest</a>
+    <a href="https://twitter.com/sthlm_badrum" title="Twitter">Twitter</a>
   </div>
   <div class="flex one">
     Adress:<a href="https://goo.gl/maps/izx65vFFoSR2" title="KM Living Construction AB">Erik Sandbergs Gata 6 Solna</a>
@@ -27,9 +29,18 @@
   </div>
 </div>
 </footer>
-<script>
-  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-  ga('create', 'UA-83609422-1', 'auto');
-  ga('send', 'pageview');
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+<amp-analytics type="googleanalytics" id="analytics">
+  <script type="application/json">
+  {
+    "vars": {
+      "account": "UA-83609422-1"
+    },
+    "triggers": {
+      "trackPageview": {
+        "on": "visible",
+        "request": "pageview"
+      }
+    }
+  }
+  </script>
+</amp-analytics>
