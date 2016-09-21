@@ -1,17 +1,30 @@
 ---
 layout: default
 ---
-<main class="flex">
-  <section class="page page-detail section-padding">
-    <h1 class="text-center m-t-2em">{{ page.title }}</h1>
-    <div class="page one">
-      {{ content }}
-    </div>
+<main itemid="{{ site.url }}{{ page.url | replace:'index.html','' }}" itemscope itemtype="http://schema.org/WebPage">
+  <section class="page-detail" itemscope itemtype="http://schema.org/AboutPage">
+    <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <meta itemprop="dateModified" datetime="{{ page.date | date: '%Y-%m-%d' }}" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+    </span>
+    <span itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+      <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+        <meta itemprop="url" content="{{ site.url }}/images/logo.jpg">
+      </span>
+    </span>
+    <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="{{ site.url }}/{{ page.image }}">
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </span>
+    <h1 class="text-center m-t-90px title" itemprop="headline name">{{ page.title }}</h1>
+    <meta itemprop="description" content="{{ page.description | flatify }}">
+    {{ content }}
   </section>
-  <section class="cta section-padding white-bg">
-    {% include partials/block_testimonials.html %}
-  </section>
-  <section class="cta section-padding">
+  <section class="cta-block">
     {% include partials/block_cta.html %}
   </section>
 </main>

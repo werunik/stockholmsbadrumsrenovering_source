@@ -1,41 +1,34 @@
 ---
 layout: home
-title: Stockholms Badrumsrenovering
+title: Badrumsrenovering Stockholm
 date: 2016-08-29 15:54:10 +0200
 class: home
 description: Vi är ett byggföretag i Stockholm med passion och expertis på badrumsrenovering och fokus på kundens specifika behov. Kontakta oss för en gratis offertbesök.
-amp_image_leader: images/badrumsrenovering.jpg
+main_image: /images/stockholmsbadrumsrenovering.jpg
 ---
-<section class="hero">
-  <div class="hero-container">
-    <div class="hero-cover"></div>
-    <div class="hero-content">
-      <h1 class="text-center title">Badrumsrenovering i Stockholm</h1>
-      <p class="text-center subtitle">Vi är specialister på badrumsrenoveringar och det är den typ av renovering vi mest utför. Efter att ha utfört hundratals badrumsrenoveringar så har vi kunskapen och skickligheten du är ute efter.</p>
-      <div class="cta text-center m-t-2em">
-        <a href="/offert" class="button">Boka Gratis offertbesök redan idag!</a>
-      </div>
+<section class="center hero text-center">
+  <div class="container">
+    <h1 class="title">Badrumsrenovering <span class="hide">Stockholm</span> - Vår Expertis</h1>
+    <p class="subtitle">Vi är specialister på <a href="/badrumsrenovering">badrumsrenoveringar</a> sedan starten år 2008 och det är den typ av renovering vi mest utför.</p>
+    <p class="subtitle">Efter att ha utfört hundratals badrumsrenoveringar så har vi kunskapen och skickligheten du är ute efter, viktigaste för oss är att du som kund ska få dina önskemål uppfyllda.</p>
+    <div class="m-t-90px">
+      <a href="/offert" class="cta-btn btn">Boka Gratis offertbesök redan idag!</a>
     </div>
   </div>
 </section>
-<section class="main flex one two-500 two-800 section-padding white-bg">
-  <div class="one">
-    <h2>Välkommen till Stockholms Badrums Renovering</h2>
-    <div id="primary-text">
-      <p>KM Living Construction AB är en byggfirma med bred och mångårig erfarenhet inom byggbranschen. Vi är specialister på badrumsrenoveringar och köksrenoveringar, men utför allt inom bygg och renovering.</p>
-      <p>Sedan starten år 2008 har det viktigaste för oss varit att du som kund ska få dina önskemål uppfyllda. Det bidrar vi till genom att hålla en nära dialog med dig och utföra våra arbeten med hög kvalitet.</p>
-      <p>De flesta som anlitar oss har blivit rekommenderade av våra kunder. Det visar att våra kunder är nöjda med vårt arbete och det kommer du garanterat också att bli.</p>
-    </div>
-    <hr class="divider">
-    {% include partials/block_call_us.html %}
-  </div>
-  <div class="one">
+<section class="grid-container testimonials">
+  <h2 class="text-center">Nöjda Kunder är det viktigaste vi har</h2>
+  <div class="row">
     {% include partials/block_testimonials_home.html %}
   </div>
+  <div class="row text-center m-t-90px m-t-0 p-b-90px p-b-10px">
+    <a href="/rekommendationer" title="Fler Rekommendationer för Stockholms Badrums Renovering" class="btn link-more">Fler Rekommendationer</a>
+  </div>
 </section>
-<section class="cta section-padding">
-  {% include partials/block_cta.html %}
+<section class="certifications text-center">
+  {% include partials/block_certifications.html %}
 </section>
-<section class="blog section-padding white-bg">
-  {% include partials/block_blog.html %}
+<section class="blog text-center">
+  <h2 itemprop="name">Bloggen</h2>
+  {% include partials/block_blog_home.html %}
 </section>

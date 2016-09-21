@@ -1,12 +1,21 @@
-<div class="testimonials">
-  <h2>Nöjda kunder</h2>
-  {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
-  {% for rekommendation in rekommendationer limit:3 %}
+{% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
+{% for rekommendation in rekommendationer limit:3 %}
+  <div class="col-2">
     <div class="testimonial block">
-      <h4><a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}">{{ rekommendation.title | escape }}</a></h4>
-      <blockquote>{{ rekommendation.excerpt markdownify | strip_html | truncatewords: 30 }}</blockquote>
-      <div class="testimonial-client">— {{ rekommendation.kund }}</div>
+      <figure class="{% if rekommendation.grid_image %}grid_image{% else %}icon_towel{% endif %}">
+        <a href="{{ rekommendation.url | prepend: site.baseurl }}" title="{{ rekommendation.title | escape }}">
+          <amp-img class="img-responsive img-grid" placeholder
+            src="{% if rekommendation.grid_image %}{{ rekommendation.grid_image }}{% else %}{{ site.icon_towel }}{% endif %}"
+            layout="responsive" width="360" height="216"
+            alt="{{ rekommendation.title }}">
+          </amp-img>
+        </a>
+      </figure>
+      <div class="testimonial-content">
+        <h3><a class="post-link" href="{{ rekommendation.url | prepend: site.baseurl }}" title="{{ rekommendation.title | escape }}">{{ rekommendation.title | escape }}</a></h3>
+        <p class="testimonial-client">{{ rekommendation.kund }}</p>
+        <a class="testimonial-more" href="{{ rekommendation.url | prepend: site.baseurl }}" title="{{ rekommendation.title | escape }}">Se mer</a>
+      </div>
     </div>
-  {% endfor %}
-  <a href="/rekommendationer" title="Fler Rekommendationer för Stockholms Badrums Renovering" class="link-more">Fler Rekommendationer</a>
-</div>
+  </div>
+{% endfor %}

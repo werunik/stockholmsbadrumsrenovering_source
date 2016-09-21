@@ -16,14 +16,14 @@
       "name": "{{ site.organization_name }}",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://cdn.amproject.org/i/{{ site.amp_cache_url }}/images/logo.jpg",
+        "url": "{{ site.url }}/images/logo.jpg",
         "width": 600,
         "height": 60
       }
     },
     "image": {
       "@type": "ImageObject",
-      "url": "https://cdn.amproject.org/i/{{ site.amp_cache_url }}/{{ page.amp_image_leader }}",
+      "url": "{% if page.main_image %}{{ site.url }}{{ page.main_image }}{% else %}{{ site.url }}{{ site.og_image }}{% endif %}",
       "height": 2000,
       "width": 800
     }

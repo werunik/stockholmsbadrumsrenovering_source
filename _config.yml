@@ -3,16 +3,15 @@ email: hej@stockholmsbadrumsrenovering.com
 description: KM Living är ett byggföretag i Stockholm. Vi är experter på badrumsrenovering, köksrenovering, totalrenovering mm. Kontakta oss nu för en gratis offert!
 baseurl: ""
 url: "https://stockholmsbadrumsrenovering.com"
-
 # AMP
 amp_cache_url: stockholmsbadrumsrenovering.com
 
-# Social Media
-twitter_username: kmliving
-github_username:  kmliving
-og_image:
+# Images
+og_image: /images/stockholmsbadrumsrenovering.jpg
+icon_towel: /images/icons/towel.svg
+
 # Schema
-organization_name: Stockholms Badrums Renovering
+organization_name: Stockholms Badrumsrenovering
 
 collections:
   posts:
