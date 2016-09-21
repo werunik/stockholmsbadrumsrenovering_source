@@ -12,7 +12,7 @@ permalink: /kontakt-offert/
     <form action="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
       <fieldset>
         <div class="form-row">
-          <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/offert/tack/' />
+          <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/tack/' />
           <label class="required" for="name">Namn</label>
           <input name="name" type="text" required>
         </div>
