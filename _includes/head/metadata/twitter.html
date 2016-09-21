@@ -1,7 +1,6 @@
 <!-- Twitter Card data -->
-<meta name="twitter:card" content="{% if page.main_image %}{{ site.url }}{{ page.main_image }}{% else %}{{ site.url}}{{ site.og_image }}{% endif %}">
+<meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sthlm_badrum">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description | flatify }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:creator" content="@sthlm_badrum">
 <meta name="twitter:image:src" content="{% if page.main_image %}{{ site.url }}{{ page.main_image }}{% else %}{{ site.url }}{{ site.og_image }}{% endif %}">
