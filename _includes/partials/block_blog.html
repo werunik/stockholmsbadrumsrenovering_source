@@ -6,8 +6,8 @@
       <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ post.url | replace:'index.html','' }}">
       <meta itemprop="description" content="{{ post.description | strip_html | truncatewords: 40 }}">
       <meta itemprop="keywords" content="{{ post.categories | join: ',' }}" />
-      <meta itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}" content="{{ post.date | date: '%Y-%m-%d' }}">
-      <meta itemprop="dateModified" datetime="{{ post.date | date: '%Y-%m-%d' }}" content="{{ post.date | date: '%Y-%m-%d' }}">
+      <meta itemprop="datePublished" content="{{ post.date | date: '%Y-%m-%d' }}">
+      <meta itemprop="dateModified" content="{{ post.date | date: '%Y-%m-%d' }}">
       <span itemprop="author" itemscope itemtype="https://schema.org/Person">
         <meta itemprop="name" content="{{ site.organization_name }}">
       </span>

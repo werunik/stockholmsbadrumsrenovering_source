@@ -4,8 +4,8 @@ layout: default
 <main itemid="{{ site.url }}{{ page.url | replace:'index.html','' }}" itemscope itemtype="http://schema.org/WebPage">
   <section class="page-detail" itemscope itemtype="http://schema.org/AboutPage">
     <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
-    <meta itemprop="datePublished" datetime="{{ page.date | date: '%Y-%m-%d' }}" content="{{ page.date | date: '%Y-%m-%d' }}">
-    <meta itemprop="dateModified" datetime="{{ page.date | date: '%Y-%m-%d' }}" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <meta itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <meta itemprop="dateModified" content="{{ page.date | date: '%Y-%m-%d' }}">
     <span itemprop="author" itemscope itemtype="https://schema.org/Person">
       <meta itemprop="name" content="{{ site.organization_name }}">
     </span>
