@@ -105,6 +105,9 @@
   .m-l-30px {
     margin-left: 30px;
   }
+  .m-t-20px {
+    margin-top: 20px;
+  }
   .m-t-90px {
     margin-top: 90px;
   }
@@ -245,11 +248,13 @@
     padding-bottom: 30px;
   }
   .campaign .campaign-description {
+    padding: 40px;
+  }
+  .campaign .campaign-description-bg-arrow {
     background: url("/images/icons/form-arrow.png");
     background-size: 60px;
     background-repeat: no-repeat;
     background-position: right bottom;
-    padding: 40px;
   }
   .campaign .campaign-description p {
     font-size: 20px;
@@ -263,8 +268,6 @@
     border-color: #f3f5f5;
     margin-left: 5em;
     padding: 1.5em;
-    z-index: 1001;
-    max-width: 22em;
   }
   fieldset {
     border: 0;
@@ -348,8 +351,10 @@
     background-color: #ea0b8c;
     border-bottom: 4px solid #b9096f;
     color: #fff;
+    display: block;
     font-weight: 900;
     text-transform: uppercase;
+    width: 100%;
   }
   .form-campaign .form-button:hover {
     background-color: #c30975;
@@ -378,6 +383,9 @@
     }
     .m-t-0 {
       margin-top: 0;
+    }
+    .sm-m-t-20px {
+      margin-top: 20px;
     }
     .p-b-10px {
       padding-bottom: 10px;
@@ -410,6 +418,27 @@
     .certifications figure {
       margin: 16px 0;
       width: 100px;
+    }
+    .campaign .campaign-description {
+      padding: 0 20px;
+    }
+    .campaign .campaign-description-bg-arrow {
+      background: none;
+    }
+    .campaign h1 {
+      font-size: 26px;
+      letter-spacing: 1px;
+      line-height: 40px;
+      margin: 20px 0;
+    }
+    .campaign .campaign-description p {
+      font-size: 18px;
+    }
+    .campaign .form-campaign {
+      padding: 0;
+    }
+    .campaign .form-campaign fieldset {
+      padding: 10px;
     }
     footer {
       padding: 20px;
