@@ -1,0 +1,38 @@
+---
+layout: campaign
+---
+<main itemid="{{ site.url }}{{ page.url | replace:'index.html','' }}" itemscope itemtype="http://schema.org/WebPage">
+  <section class="campaign-detail p-b-90px grid-container clearfix" itemscope itemtype="http://schema.org/CollectionPage">
+    <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <meta itemprop="dateModified" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+    </span>
+    <span itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+      <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+        <meta itemprop="url" content="{{ site.url }}/images/logo.jpg">
+      </span>
+    </span>
+    <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="{{ site.url }}/{{ page.image }}">
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </span>
+    <meta itemprop="description" content="{{ page.description | flatify }}">
+    <div class="grid-container">
+      <div class="row">
+        <div class="col-3">
+          <div class="campaign-description">
+            <h1 class="text-center m-t-90px title" itemprop="headline name">{{ page.title }}</h1>
+            {{ content }}
+          </div>
+        </div>
+        <div class="col-3">
+          {% include partials/block_cta_campaign.html %}
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
