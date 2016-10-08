@@ -2,7 +2,7 @@
   {% include head/css/grid.html %}
   body {
     background: #fff;
-    border: 10px solid #e6ae47;
+    border: 10px solid #f19126;
     color: #1d1d1d;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1em;
@@ -28,7 +28,7 @@
     text-decoration: none;
   }
   a:link, a:visited {
-    color: #e6ae48;
+    color: #f19126;
     cursor: pointer;
     font-weight: 600;
     transition: all 0.25s ease;
@@ -43,7 +43,7 @@
     text-transform: uppercase;
   }
   a.cta-btn {
-    background: #e6ae48;
+    background: #f19126;
     box-shadow: 5px 5px 12px rgba(0,0,0,.2);
     color: #fff;
   }
@@ -86,7 +86,7 @@
     margin: 0;
   }
   figure.icon_towel {
-    background: #f1cc88;
+    background: #f19126;
   }
   figure.icon_towel img {
     height: 100px;
@@ -260,9 +260,13 @@
     background-repeat: no-repeat;
     background-position: right bottom;
   }
-  .campaign .campaign-description p {
+  .campaign .campaign-description p,
+  .campaign .campaign-description ul li {
     font-size: 20px;
     line-height: 30px;
+  }
+  .campaign .campaign-description ul {
+    list-style-position: inside;
   }
   /* Forms */
   .form-campaign {
