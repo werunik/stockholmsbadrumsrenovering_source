@@ -22,11 +22,11 @@ permalink: /bloggen/
       <span itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
         <meta itemprop="name" content="{{ site.organization_name }}">
         <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-          <meta itemprop="url" content="{{ site.url }}/images/logo.jpg">
+          <meta itemprop="url" content="{{ site.logo_jpg }}">
         </span>
       </span>
       <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-        <meta itemprop="url" content="{{ site.url }}/{{ post.image }}">
+        <meta itemprop="url" content="{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}">
         <meta itemprop="width" content="800">
         <meta itemprop="height" content="800">
       </span>

@@ -7,8 +7,9 @@ url: "https://www.stockholmsbadrumsrenovering.com"
 amp_cache_url: stockholmsbadrumsrenovering.com
 
 # Images
-og_image: /images/stockholmsbadrumsrenovering.jpg
-icon_towel: /images/icons/towel.svg
+og_image: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/c_scale,w_664/v1475944995/main/stockholmsbadrumsrenovering.jpg
+logo_jpg: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475945656/main/logo.jpg
+icon_towel: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475946698/icons/towel.svg
 
 # Schema
 organization_name: Stockholms Badrumsrenovering
@@ -16,9 +17,9 @@ organization_name: Stockholms Badrumsrenovering
 collections:
   posts:
     permalink: /bloggen/:year/:title
-  kunder:
+  badrumsrenovering:
     output: true
-    permalink: /kunder/:path/
+    permalink: /:path/
   rekommendationer:
     output: true
     permalink: /rekommendationer/:path/

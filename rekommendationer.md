@@ -5,17 +5,16 @@ date: 2016-08-29 15:54:10 +0200
 class: testimonial-page
 description: Många som anlitar oss har blivit rekommenderade av våra kunder. De visar att de uppskattar vårt arbete och det kommer du garanterat också att göra.
 permalink: /rekommendationer/
-main_image: /images/rekommendationer.jpg
 ---
 <section class="grid-container" itemprop="articleBody">
   {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
   {% for rekommendation in rekommendationer %}
   <div class="col-2">
     <div class="testimonial block">
-      <figure class="{% if rekommendation.grid_image %}grid_image{% else %}icon_towel{% endif %}">
+      <figure class="{% if rekommendation.main_image %}main_image{% else %}icon_towel{% endif %}">
         <a href="{{ rekommendation.url | prepend: site.baseurl }}" title="{{ rekommendation.title | escape }}">
           <amp-img class="img-responsive img-grid" placeholder
-            src="{% if rekommendation.grid_image %}{{ rekommendation.grid_image }}{% else %}{{ site.icon_towel }}{% endif %}"
+            src="{% if rekommendation.main_image %}{{ rekommendation.main_image }}{% else %}{{ site.icon_towel }}{% endif %}"
             layout="responsive" width="360" height="216"
             alt="{{ rekommendation.title }}">
           </amp-img>

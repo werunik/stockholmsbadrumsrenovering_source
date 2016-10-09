@@ -16,14 +16,14 @@
       "name": "{{ site.organization_name }}",
       "logo": {
         "@type": "ImageObject",
-        "url": "{{ site.url }}/images/logo.jpg",
+        "url": "{{ site.logo_jpg }}",
         "width": 600,
         "height": 60
       }
     },
     "image": {
       "@type": "ImageObject",
-      "url": "{% if page.main_image %}{{ site.url }}{{ page.main_image }}{% else %}{{ site.url }}{{ site.og_image }}{% endif %}",
+      "url": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
       "height": 2000,
       "width": 800
     }

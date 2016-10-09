@@ -2,10 +2,10 @@
 {% for rekommendation in rekommendationer limit:3 %}
   <div class="col-2">
     <div class="testimonial block">
-      <figure class="{% if rekommendation.grid_image %}grid_image{% else %}icon_towel{% endif %}">
+      <figure class="{% if rekommendation.main_image %}main_image{% else %}icon_towel{% endif %}">
         <a href="{{ rekommendation.url | prepend: site.baseurl }}" title="{{ rekommendation.title | escape }}">
           <amp-img class="img-responsive img-grid" placeholder
-            src="{% if rekommendation.grid_image %}{{ rekommendation.grid_image }}{% else %}{{ site.icon_towel }}{% endif %}"
+            src="{% if rekommendation.main_image %}{{ rekommendation.main_image }}{% else %}{{ site.icon_towel }}{% endif %}"
             layout="responsive" width="360" height="216"
             alt="{{ rekommendation.title }}">
           </amp-img>
