@@ -2,3 +2,43 @@
 layout: default
 ---
 {{ content }}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "WebPage",
+  "serviceType": "{{ site.service_type }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "name": "{{ page.title }}",
+  "headline": "{{ page.title }}",
+  "image": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
+  "description": "{{ page.description | flatify }}",
+  "areaServed": {
+    "@type": "State",
+    "name": "{{ site.area_served }}"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.organization_name }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.city }}, {{ site.country }}",
+      "postalCode": "{{ site.postalcode }}",
+      "streetAddress": "{{ site.address }}"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo_jpg }}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "89"
+  }
+}
+</script>

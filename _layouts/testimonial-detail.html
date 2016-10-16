@@ -44,3 +44,46 @@ layout: default
     {% include partials/block_cta.html %}
   </section>
 </main>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Review",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "name": "{{ page.title }}",
+  "headline": "{{ page.title }}",
+  "image": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
+  "description": "{{ page.description | flatify }}",
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.organization_name }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.city }}, {{ site.country }}",
+      "postalCode": "{{ site.postalcode }}",
+      "streetAddress": "{{ site.address }}"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo_jpg }}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "itemReviewed": {
+    "@type": "Thing",
+    "name": "{{ site.service_type }}"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ page.kund }}"
+  },
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ page.rating_value }}",
+    "bestRating": "10"
+  }
+}
+</script>

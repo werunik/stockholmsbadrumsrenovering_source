@@ -34,5 +34,110 @@ layout: campaign
         </div>
       </div>
     </div>
+    <div class="grid-container campaign-trust">
+      <div class="row">
+        <div class="col-3">
+          <div class="customer-reviews">
+            <h3>kundrecensioner</h3>
+            <div class="customer-review">
+              <p>Professionellt och trevligt bemötande från början till slut, Kvaliteten i projektet har varit imponerande rakt igenom.<br>
+              Kan absolut rekommendera.</p>
+              <div class="photo inline">
+                <img src="/images/campaigns/host-2016/kundrecensioner-badrumsrenovering-robert.jpg">
+              </div>
+              <div class="user inline">
+                Robert S
+              </div>
+            </div>
+            <div class="customer-review">
+              <p>Totalrenovering av 2 badrum, arbetet utfördes metodiskt och resultatet blev fantastiskt bra. Det är verkligen sånt som vi uppskattar!<br>
+              Vi kan verkligen rekommendera!</p>
+              <div class="photo inline">
+                <img src="/images/campaigns/host-2016/kundrecensioner-badrumsrenovering-magdalena.jpg">
+              </div>
+              <div class="user inline">
+                Magdalena och Mathias
+              </div>
+            </div>
+            <div class="customer-review">
+              <p>Vi fick vår badrum renoverad i April 2016. Jobbet har gjorts riktigt grundligt och det finns inte det minsta fel.
+              <br>
+              Vi är mycket nöjda, rekommenderas varmt!</p>
+              <div class="photo inline">
+                <img src="/images/campaigns/host-2016/kundrecensioner-badrumsrenovering-jonas.jpg">
+              </div>
+              <div class="user inline">
+                Jonas och Karin
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="faq">
+            <h3>Vanliga frågor</h3>
+            <div class="faq-item">
+              <h4>Hur fungerar det?</h4>
+              <p>När du har skickat formuläret kommer vi komma i kontakt med dig och boka ett besök för att förbereda dig ett erbjudande som omfattar minskning på 25%.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Kan jag använda erbjudande efter att den har gått ut?</h4>
+              <p>När du har skickat formuläret kommer vi att komma i kontakt med dig, låt oss veta när du kommer att vara redo att renovera ditt badrum och vi kommer att spara erbjudandet för dig.</p>
+            </div>
+            <div class="faq-item">
+              <h4>Har ni rabatter på badrumsinredning och kakel?</h4>
+              <p>Vi samarbetar med flera företag och kan erbjuda dig mellan 15-40% rabatt.<br>
+              Vi hjälper er även med hämtning av kakel och inredning kostnadsfritt.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </main>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "{{ site.service_type }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "name": "{{ page.title }}",
+  "headline": "{{ page.title }}",
+  "image": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
+  "description": "{{ page.description | flatify }}",
+  "areaServed": {
+    "@type": "State",
+    "name": "{{ site.area_served }}"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.organization_name }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.city }}, {{ site.country }}",
+      "postalCode": "{{ site.postalcode }}",
+      "streetAddress": "{{ site.address }}"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo_jpg }}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "offers" : {
+    "@type" : "Offer",
+    "availability" : "http://schema.org/LimitedAvailability",
+    "availabilityEnds" : "{{ page.campaign_expire }}"
+    "price" : "{{ page.campaign_price }}",
+    "url" : "{{ site.url }}{{ page.url | replace:'index.html','' }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "89"
+  }
+}
+</script>

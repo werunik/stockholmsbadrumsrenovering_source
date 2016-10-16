@@ -1,8 +1,18 @@
+# Schema
+organization_name: Stockholms Badrumsrenovering
 title: Badrumsrenovering Stockholm
 email: hej@stockholmsbadrumsrenovering.com
 description: KM Living är ett byggföretag i Stockholm. Vi är experter på badrumsrenovering, köksrenovering, totalrenovering mm. Kontakta oss nu för en gratis offert!
 baseurl: ""
 url: "https://www.stockholmsbadrumsrenovering.com"
+phone: "08-36 61 21"
+address: "Erik Sandbergs gata 6"
+postalcode: "16934"
+city: "Solna"
+country: "Sweden"
+service_type: "Badrumsrenovering"
+area_served: "Stockholm"
+
 # AMP
 amp_cache_url: stockholmsbadrumsrenovering.com
 
@@ -11,9 +21,7 @@ og_image: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/c_
 logo_jpg: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475945656/main/logo.jpg
 icon_towel: https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475946698/icons/towel.svg
 
-# Schema
-organization_name: Stockholms Badrumsrenovering
-
+# Collections
 collections:
   posts:
     permalink: /bloggen/:year/:title
