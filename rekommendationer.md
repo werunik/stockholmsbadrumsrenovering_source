@@ -5,6 +5,8 @@ date: 2016-08-29 15:54:10 +0200
 class: testimonial-page
 description: Många som anlitar oss har blivit rekommenderade av våra kunder. De visar att de uppskattar vårt arbete och det kommer du garanterat också att göra.
 permalink: /rekommendationer/
+redirect_from:
+  - /rekommendationer/www.kmliving.se/badrumsrenovering/
 ---
 <section class="grid-container" itemprop="articleBody">
   {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}

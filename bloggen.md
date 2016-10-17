@@ -5,6 +5,10 @@ date: 2016-08-29 15:54:10 +0200
 class: blog
 description: Bloggen för dig som älskar badrum! Följ oss här, på Instagram (@km.living) och Facebook (www.facebook.com/KMLivingConstructionAB)
 permalink: /bloggen/
+redirect_from:
+  - /bloggen/2016/third-post
+  - /bloggen/2016/welcome-to-jekyll
+  - /bloggen/2016/second-post
 ---
 <section class="center p-b-90px" itemscope="" itemtype="http://schema.org/Blog">
   <div class="container">

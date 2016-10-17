@@ -5,6 +5,10 @@ date: 2016-08-29 15:54:10 +0200
 class: offert
 description: Kontakta oss för en gratis offert eller ett kostnadsfritt besök.
 permalink: /kontakt-offert/
+redirect_from:
+  - /kontakt
+  - /kontakt/
+  - /offert/
 ---
 <section class="cta-form center p-b-90px">
   <div class="container">

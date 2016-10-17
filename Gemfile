@@ -2,6 +2,7 @@ source "https://rubygems.org"
 ruby RUBY_VERSION
 
 gem "jekyll", "3.2.1"
+gem 'jekyll-redirect-from'
 gem 'jekyll-sitemap'
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
