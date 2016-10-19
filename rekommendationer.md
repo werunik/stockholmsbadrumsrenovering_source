@@ -8,7 +8,7 @@ permalink: /rekommendationer/
 redirect_from:
   - /rekommendationer/www.kmliving.se/badrumsrenovering/
 ---
-<section class="grid-container" itemprop="articleBody">
+<section class="grid-container">
   {% assign rekommendationer = (site.rekommendationer | sort: 'date') | reverse %}
   {% for rekommendation in rekommendationer %}
   <div class="col-2">

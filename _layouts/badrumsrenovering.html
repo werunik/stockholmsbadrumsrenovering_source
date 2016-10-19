@@ -36,7 +36,6 @@ layout: default
   "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
   "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
   "name": "{{ page.title }}",
-  "headline": "{{ page.title }}",
   "image": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
   "description": "{{ page.description | flatify }}",
   "areaServed": {
