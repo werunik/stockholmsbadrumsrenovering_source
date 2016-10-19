@@ -2,7 +2,7 @@
 layout: default
 ---
 <main itemid="{{ site.url }}{{ page.url | replace:'index.html','' }}" itemscope itemtype="http://schema.org/WebPage">
-  <section class="page-detail" itemscope itemtype="http://schema.org/AboutPage">
+  <section class="page-detail" itemscope>
     <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
     <meta itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
     <meta itemprop="dateModified" content="{{ page.date | date: '%Y-%m-%d' }}">
