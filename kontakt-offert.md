@@ -13,7 +13,7 @@ redirect_from:
 <section class="cta-form center p-b-90px">
   <div class="container">
     <p>Kontakta oss gärna för att få en kostnadsfritt möte eller <a href="tel:+468366121" class="footer-link">telefonsamtal</a> där vi tillsammans går igenom dina önskemål och möjligheter.</p>
-    <form action="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
+    <form action-xhr="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
       <fieldset>
         <div class="form-row">
           <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/tack/' />

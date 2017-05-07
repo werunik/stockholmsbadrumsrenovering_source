@@ -41,5 +41,6 @@ markdown: kramdown
 gems:
   - jekyll-sitemap
   - jekyll-redirect-from
+  - jekyll-admin
 
 exclude: [Rakefile]

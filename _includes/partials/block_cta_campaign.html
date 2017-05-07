@@ -3,17 +3,17 @@
     <fieldset>
       <div class="form-row">
         <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/tack/' />
-        <label class="required" for="name">Namn</label>
+        <label class="required" id="name" for="name">Namn</label>
         <input name="name" type="text" required>
       </div>
       <div class="form-row">
-        <label class="required" for="email">E-post</label>
+        <label class="required" id="email" for="email">E-post</label>
         <input name="email" type="email" required>
       </div>
       <div class="form-row">
-        <label for="email">Telefonnummer</label>
+        <label id="phone" for="phone">Telefonnummer</label>
         <input name="phone" type="tel">
-        <input type="hidden" name='content'>
+        <input type="hidden" name="content">
       </div>
       <div class="form-row">
         <input name="campaign-{{ page.campaign_id }}" type="hidden">

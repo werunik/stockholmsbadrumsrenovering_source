@@ -1,6 +1,6 @@
-<h2 class="text-center">Vill du få en gratis offert eller ett kostnadsfritt besök?</h2>
-<div class="cta-form center">
-  <form class="container" action-xhr="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
+<div class="cta-form m-t-70px sm-m-t-20px">
+  <form class="container form-campaign" action-xhr="https://getsimpleform.com/messages?form_api_token=5ab23810db39b60660122bd3f7480688" method="post" target="_top">
+    <h3 class="form-title">Få en gratis offert idag!</h3>
     <fieldset>
       <div class="form-row">
         <input type='hidden' name='redirect_to' value='https://www.stockholmsbadrumsrenovering.com/tack/' />
@@ -16,13 +16,16 @@
         <input name="phone" type="tel">
         <input type="hidden" name="content">
       </div>
+      <div class="form-row">
+        <label id="message" for="message">Meddelande</label>
+        <textarea name="message" rows="8" placeholder=""></textarea>
+      </div>
+      <div class="form-row">
+        <input name="campaign-{{ page.campaign_id }}" type="hidden">
+      </div>
     </fieldset>
     <fieldset>
-      <label id="message" for="message">Meddelande</label>
-      <textarea name="message" rows="8" placeholder=""></textarea>
-    </fieldset>
-    <fieldset>
-      <input class="form-button" type="submit" value="Kontakta Mig">
+      <input class="form-button" type="submit" value="Skicka meddelande">
     </fieldset>
   </form>
 </div>

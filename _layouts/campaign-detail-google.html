@@ -1,0 +1,203 @@
+---
+layout: campaign
+---
+<main itemid="{{ site.url }}{{ page.url | replace:'index.html','' }}" itemscope itemtype="http://schema.org/WebPage">
+  <section class="campaign-detail campaign-detail-google p-b-90px grid-container clearfix" itemscope itemtype="http://schema.org/CollectionPage">
+    <link itemprop="mainEntityOfPage" href="{{ site.url }}{{ page.url | replace:'index.html','' }}">
+    <meta itemprop="datePublished" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <meta itemprop="dateModified" content="{{ page.date | date: '%Y-%m-%d' }}">
+    <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+    </span>
+    <span itemscope itemprop="publisher" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="{{ site.organization_name }}">
+      <span itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+        <meta itemprop="url" content="{{ site.logo_jpg }}">
+      </span>
+    </span>
+    <span itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+      <meta itemprop="url" content="{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}">
+      <meta itemprop="width" content="800">
+      <meta itemprop="height" content="800">
+    </span>
+    <meta itemprop="description" content="{{ page.description | flatify }}">
+    <div class="grid-container">
+      <div class="row">
+      <h1 class="text-center m-t-90px title" itemprop="headline name">{{ page.title }}</h1>
+        <div class="col-3">
+          <div class="campaign-description">
+
+            {{ content }}
+          </div>
+        </div>
+        <div class="col-3">
+          {% include partials/block_cta_campaign_google.html %}
+        </div>
+      </div>
+    </div>
+    <div class="grid-container campaign-testimonials">
+      <div class="row">
+
+        <h3 class="campaign-testimonials-title">Att du blir nöjd är det viktigaste för oss</h3>
+        {% include partials/block_testimonials_home.html %}
+      </div>
+    </div>
+    <div class="grid-container campaign-trust">
+      <div class="row">
+        <div class="col-3">
+          <div class="customer-reviews">
+            <h3>kundrecensioner</h3>
+            <div class="customer-review">
+              <p>Professionellt och trevligt bemötande från början till slut. Kvaliteten i projektet har varit imponerande rakt igenom.<br>
+              Kan absolut rekommendera.</p>
+              <div class="photo inline">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1476685645/campaign/2016/host-2016/kundrecensioner-badrumsrenovering-robert.jpg"
+                  width="55" height="55"
+                  alt="Robert S">
+                </amp-img>
+              </div>
+              <div class="user inline">
+                Robert S
+              </div>
+            </div>
+            <div class="customer-review">
+              <p>Totalrenovering av 2 badrum, arbetet utfördes metodiskt och resultatet blev fantastiskt bra. Det är verkligen sånt som vi uppskattar!<br>
+              Vi kan verkligen rekommendera!</p>
+              <div class="photo inline">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1476685645/campaign/2016/host-2016/kundrecensioner-badrumsrenovering-magdalena.jpg"
+                  width="55" height="55"
+                  alt="Magdalena och Mathias">
+                </amp-img>
+              </div>
+              <div class="user inline">
+                Magdalena och Mathias
+              </div>
+            </div>
+            <div class="customer-review">
+              <p>Vi fick vår badrum renoverad i april 2016. Jobbet har gjorts riktigt grundligt och det finns inte det minsta fel.
+              <br>
+              Vi är mycket nöjda, rekommenderas varmt!</p>
+              <div class="photo inline">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1476685645/campaign/2016/host-2016/kundrecensioner-badrumsrenovering-jonas.jpg"
+                  width="55" height="55"
+                  alt="Jonas och Karin">
+                </amp-img>
+              </div>
+              <div class="user inline">
+                Jonas och Karin
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="faq certifications">
+            <div class="faq-item">
+              <h4>Garantier och certifieringar</h4>
+              <ul>
+                <li>Vi är medlemmar i byggkeramikrådet, ElsäkerhetsverketSÄK och PER.</li>
+                <li>Vi är behöriga i våtrum, el och tätskiktssystem, vi samarbetar endast med behöriga underentreprenörer.</li>
+                <li>Vi är medlemmar i SÄK seriositet, Ärlighet och kunskap.</li>
+                <li>Vi håller på att certifiera oss i miljö och kvalitetsarbete enligtISO 9001:2008 samt ISO 14001:2004.</li>
+              </ul>
+            </div>
+            <figure>
+              <a href="http://www.bkr.se/om-bkr/per/" title="PlattsättningsEntreprenörernas Riksförenings (PER)">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475947898/main/certifications/logo-per.jpg"
+                  layout="responsive" width="260" height="200"
+                  alt="PlattsättningsEntreprenörernas Riksförenings (PER)">
+                </amp-img>
+              </a>
+            </figure>
+            <figure>
+              <a href="http://www.bkr.se/" title="Byggkeramikrådet (BKR)">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475947898/main/certifications/logo-bkr.svg"
+                  layout="responsive" width="260" height="200"
+                  alt="Byggkeramikrådet (BKR)">
+                </amp-img>
+              </a>
+            </figure>
+            <figure>
+              <a href="http://www.elsakerhetsverket.se/om-oss/Samarbete/" title="Elsakerhetsverket">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475947898/main/certifications/logo-elsakerhetsverket.svg"
+                  layout="responsive" width="260" height="200"
+                  alt="Elsakerhetsverket">
+                </amp-img>
+              </a>
+            </figure>
+            <figure>
+              <a href="http://www.sakervatten.se/auktorisation" title="auktoriserade VVS-företag">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475947898/main/certifications/logo-sakervatten.png"
+                  layout="responsive" width="260" height="200"
+                  alt="auktoriserade VVS-företag">
+                </amp-img>
+              </a>
+            </figure>
+            <figure>
+              <a href="https://www.if.se/privat" title="Försäkringsbolaget If">
+                <amp-img class="logo" placeholder
+                  src="https://res.cloudinary.com/stockholmsbadrumsrenovering/image/upload/v1475947898/main/certifications/logo-if.png"
+                  layout="responsive" width="260" height="200"
+                  alt="Försäkringsbolaget If">
+                </amp-img>
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Service",
+  "serviceType": "{{ site.service_type }}",
+  "mainEntityOfPage": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "url": "{{ site.url }}{{ page.url | replace:'index.html','' }}",
+  "name": "{{ page.title }}",
+  "headline": "{{ page.title }}",
+  "image": "{% if page.main_image %}{{ page.main_image }}{% else %}{{ site.og_image }}{% endif %}",
+  "description": "{{ page.description | flatify }}",
+  "areaServed": {
+    "@type": "State",
+    "name": "{{ site.area_served }}"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "{{ site.organization_name }}",
+    "telephone": "{{ site.phone }}",
+    "email": "{{ site.email }}",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{{ site.city }}, {{ site.country }}",
+      "postalCode": "{{ site.postalcode }}",
+      "streetAddress": "{{ site.address }}"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.logo_jpg }}",
+      "width": 600,
+      "height": 60
+    }
+  },
+  "offers" : {
+    "@type" : "Offer",
+    "availability" : "http://schema.org/LimitedAvailability",
+    "availabilityEnds" : "{{ page.campaign_expire }}"
+    "price" : "{{ page.campaign_price }}",
+    "url" : "{{ site.url }}{{ page.url | replace:'index.html','' }}"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "89"
+  }
+}
+</script>
